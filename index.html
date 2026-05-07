@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Lantern Festival</title>
+  <meta name="description" content="Prototipo base mobile-first de Lantern Festival.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="top-bar">
+      <h1 class="game-title">Lantern Festival</h1>
+      
+    </header>
+
+    <main class="main-content">
+      <section id="start-menu" class="panel menu-panel" aria-label="Menú principal">
+        <h2 class="menu-logo">Lantern Festival</h2>
+        <p class="menu-tagline">The lanterns await your guidance.</p>
+
+        <div class="menu-actions">
+          <button id="play-btn" type="button">Play (Nivel 1)</button>
+          <button id="settings-btn" type="button" aria-expanded="false" aria-controls="options-panel">
+            Settings
+          </button>
+        </div>
+      </section>
+
+      <section id="options-panel" class="panel options-panel" aria-label="Opciones" hidden>
+        <h2>Settings</h2>
+        <div class="option-row">
+          <span id="music-status">Music: ON</span>
+          <button id="music-toggle-btn" type="button">Toggle</button>
+        </div>
+        <div class="option-row">
+          <span id="sfx-status">SFX: ON</span>
+          <button id="sfx-toggle-btn" type="button">Toggle</button>
+        </div>
+      </section>
+
+      <section id="game-container" class="panel game-panel" aria-label="Game area" hidden>
+        <h2>Lantern Festival</h2>
+        <canvas id="game-canvas" width="360" height="640" aria-label="Tablero principal del juego"></canvas>
+        <div class="game-actions">
+          <button id="reset-btn" type="button">Restart</button>
+          <button id="next-play-btn" type="button" disabled>Play Again</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
